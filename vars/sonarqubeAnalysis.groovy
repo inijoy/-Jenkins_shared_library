@@ -1,6 +1,6 @@
 def call() {
-    // 'sonar-scanner' is the name of the SonarQube server configured in Jenkins
-    withSonarQubeEnv('sonar-scanner') {
+    // 'sonar_server' is the SonarQube server configured in Jenkins
+    withSonarQubeEnv('sonar_server') {
         sh """
             \$SCANNER_HOME/bin/sonar-scanner \
             -Dsonar.projectName=Youtube \
