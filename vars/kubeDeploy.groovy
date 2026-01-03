@@ -1,6 +1,6 @@
 def call() {
-    // The credentialsId must match the ID you gave the secret file in Jenkins
+    // Ensure 'kubeconfig' matches your Jenkins Secret File Credential ID
     withKubeConfig([credentialsId: 'kubeconfig']) {
-        sh "kubectl apply -f deployment.yml"
+        sh "/usr/local/bin/kubectl apply -f deployment.yml"
     }
 }
